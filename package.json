@@ -1,0 +1,17 @@
+{
+  "name": "@tuuturu/motoblog-common",
+  "version": "0.0.1",
+  "description": "",
+  "files": [
+    "models/*"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Julius Pedersen <deifyed@ctemplar.com>",
+  "license": "GPL-3.0-or-later",
+  "devDependencies": {
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.8.0"
+  }
+}
