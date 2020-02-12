@@ -1,18 +1,22 @@
 {
   "name": "@tuuturu/motoblog-common",
   "version": "0.0.2",
-  "description": "",
   "files": [
-    "models/*"
+    "dist/*"
   ],
   "scripts": {
+    "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Julius Pedersen <deifyed@ctemplar.com>",
   "license": "GPL-3.0-or-later",
   "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
     "babel-eslint": "^10.0.3",
+    "babel-loader": "^8.0.6",
     "eslint": "^6.8.0",
-    "webpack": "^4.41.6"
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11"
   }
 }

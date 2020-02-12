@@ -1,9 +1,11 @@
-name: Node.js Package
+name: Pipeline
 
 on:
   push:
     branches:
       - master
+    paths:
+      - '**.js'
 
 jobs:
   build:
@@ -14,14 +16,15 @@ jobs:
         with:
           node-version: 12
       - run: npm ci
-  
+      - run: npm run build
+
   bump:
     needs: build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
         with:
-          ref: ${{ github.ref }} 
+          ref: ${{ github.ref }}
       - name: "Automated Version Bump"
         uses: "phips28/gh-action-bump-version@master"
         with:
@@ -40,6 +43,7 @@ jobs:
           registry-url: https://npm.pkg.github.com/
           scope: '@tuuturu'
       - run: npm ci
+      - run: npm run build
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
