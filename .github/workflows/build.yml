@@ -29,7 +29,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-  publish-gpr:
+  publish:
     needs: bump
     runs-on: ubuntu-latest
     steps:
