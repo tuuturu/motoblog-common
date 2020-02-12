@@ -2,7 +2,7 @@
   "name": "@tuuturu/motoblog-common",
   "version": "0.0.4",
   "files": [
-    "dist/*"
+    "*.js"
   ],
   "scripts": {
     "build": "webpack",
