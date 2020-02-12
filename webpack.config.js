@@ -6,6 +6,7 @@ module.exports = {
   context: path.resolve(__dirname, 'src'),
 
   entry: {
+    'package.json': '../package.json',
   	models: './models.js'
   },
 
