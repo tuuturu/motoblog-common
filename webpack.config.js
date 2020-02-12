@@ -3,9 +3,17 @@ const path = require('path')
 module.exports = {
   mode: 'production',
 
+  context: path.resolve(__dirname, 'src'),
+
+  entry: {
+    'package.json': '../package.json',
+  	models: './models.js'
+  },
+
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'common.js'
+    filename: '[name].js',
+    chunkFilename: '[name].js',
+    path: path.resolve(__dirname, 'dist')
   },
 
   resolve: {
