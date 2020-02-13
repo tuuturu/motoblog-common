@@ -1,7 +1,9 @@
 import { default as post_module } from '~/models/post'
 
-export default {
+console.log(post_module)
+
+export default () => ({
 	models: {
 		...post_module
 	}
-}
+})
