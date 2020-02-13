@@ -11,6 +11,7 @@ export const PostType = Object.freeze({
 export class Post {
 	constructor(raw_post) {
 		this.id = raw_post.id
+    this.status = raw_post.status
 		this.title = raw_post.title
 		this.location = raw_post.location
 		this.date = raw_post.date
@@ -43,7 +44,7 @@ export class Post {
 	}
 }
 
-module.exports = {
+export default {
 	PostType,
 	Post
 }

@@ -1,5 +1,7 @@
 import post_module from '~/models/post'
 
-module.exports = {
-	models: { ...post_module }
+export const models = { ...post_module }
+
+export default {
+	models
 }
