@@ -43,7 +43,7 @@ export class Post {
 	}
 }
 
-export default {
+module.exports = {
 	PostType,
 	Post
 }
