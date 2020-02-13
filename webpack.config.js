@@ -4,7 +4,7 @@ module.exports = {
   mode: 'production',
 
   output: {
-    filename: 'common.js',
+    filename: 'index.js',
     path: path.resolve(__dirname, 'dist')
   },
 
