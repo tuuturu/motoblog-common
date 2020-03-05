@@ -14,7 +14,7 @@ export class Post {
     this.status = raw_post.status
 		this.title = raw_post.title
 		this.location = raw_post.location
-		this.date = raw_post.date
+		this.date = new Date(raw_post.date)
 		this.distance = raw_post.distance
 		this.content = raw_post.content
 		this.images = raw_post.images
