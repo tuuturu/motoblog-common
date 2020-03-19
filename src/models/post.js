@@ -12,7 +12,7 @@ export class Post {
 	constructor(raw_post) {
 		this.id = raw_post.id
 		this.author = raw_post.author
-		this.drift = raw_post.drift
+		this.trip = raw_post.trip
     this.status = raw_post.status
 		this.title = raw_post.title
 		this.location = raw_post.location
