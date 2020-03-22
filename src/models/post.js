@@ -17,7 +17,9 @@ export class Post {
 		this.title = raw_post.title
 		this.location = raw_post.location
 		this.date = new Date(raw_post.date)
-		this.distance = raw_post.distance
+
+		if (raw_post.distance)
+			this.distance = parseInt(raw_post.distance)
 		this.content = raw_post.content
 		this.images = raw_post.images
 	}
