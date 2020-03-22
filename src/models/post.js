@@ -1,4 +1,4 @@
-export const PostType = Object.freeze({
+export const PostStatus = Object.freeze({
 	DRAFT: 'DRAFT',
 	PUBLISHED: 'PUBLISHED',
 	UNPUBLISHED: 'UNPUBLISHED',
@@ -49,6 +49,6 @@ export class Post {
 }
 
 export default {
-	PostType,
+	PostStatus,
 	Post
 }
