@@ -21,7 +21,7 @@ export class Post {
 		if (raw_post.distance)
 			this.distance = parseInt(raw_post.distance)
 		this.content = raw_post.content
-		this.images = raw_post.images
+		this.images = raw_post.images || []
 	}
 
 	/**
