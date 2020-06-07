@@ -15,7 +15,7 @@ export class Post {
 		this.trip = raw_post.trip
     this.status = raw_post.status
 		this.title = raw_post.title
-		this.location = raw_post.location
+		this.points = raw_post.points || []
 		this.date = new Date(raw_post.date)
 
 		if (raw_post.distance)
@@ -29,15 +29,7 @@ export class Post {
 	 * @return {Array} [lat, long]
 	 */
 	get coords() {
-		if (this.location.indexOf('geo:') === -1)
-			throw new Error('Bad geo URI format')
-
-		let raw_coords = this.location.substr(4)
-
-		if (raw_coords.indexOf('?') !== -1)
-			raw_coords = raw_coords.split('?')[0]
-
-		return raw_coords.split(',').map(val => Number.parseFloat(val))
+		return this.points.map(point => [point.latitude, point.longitude])
 	}
 
 	getDayRelativeTo(date) {
