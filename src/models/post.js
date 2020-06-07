@@ -9,19 +9,29 @@ export const PostStatus = Object.freeze({
 })
 
 export class Post {
-	constructor(raw_post) {
-		Object.assign(this, {
-			id: -1,
-			author: 'anonymous',
-			trip: '',
-			status: PostStatus.DRAFT,
-			title: '',
-			content: '',
-			date: new Date(Date.now()),
-			points: [],
-			images: [],
-			distance: 0,
-		}, raw_post)
+	constructor({
+		id = -1,
+		author = 'anonymous',
+		status = PostStatus.DRAFT,
+		trip = '',
+		title = '',
+		content = '',
+		date = new Date(Date.now()),
+		images = [],
+		points = []
+	}) {
+		this.id = id
+		this.author = author
+		this.status = status
+
+		this.trip = trip
+
+		this.title = title
+		this.content = content
+		this.date = date
+
+		this.images = images
+		this.points = points
 	}
 
 	/**
